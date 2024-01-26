@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import React from 'react';
 import Wallet from './wallet.page';
 import Link from 'next/link';
+import Image from 'next/image';
 // import AdminComponent from './adminCtrl.page';
 // import { useAccount } from 'wagmi';
 // import { useIsMounted } from './useIsMounted';
@@ -28,17 +29,17 @@ const Home: NextPage = () => {
         
       </main>
 
-      <img src="/bottomImg.png" alt="Logo" className={styles.bottomImg} />
+      <Image src="/bottomImg.png" alt="Logo" className={styles.bottomImg} />
 
       <footer className={styles.footer}>
         <Link href="https://opensea.io/assets/ethereum/0x715af60ec1c3c65e294c7d8ef340f14e754c66bb" rel="noopener noreferrer" target="_blank">
-          <img src="/opensea_icon.svg" alt="OpenSea" className={styles.footerLogo} />
+          <Image src="/opensea_icon.svg" alt="OpenSea" className={styles.footerLogo} />
         </Link>
         <Link href="https://etherscan.io/address/0x715af60ec1c3c65e294c7d8ef340f14e754c66bb" rel="noopener noreferrer" target="_blank">
-          <img src="/eth_icon.svg" alt="Etherscan" className={styles.footerLogo} />
+          <Image src="/eth_icon.svg" alt="Etherscan" className={styles.footerLogo} />
         </Link>
         <Link href="https://twitter.com/DogSanctuaryNFT" rel="noopener noreferrer" target="_blank">
-          <img src="/x_icon.svg" alt="Twitter" className={styles.footerLogo} />
+          <Image src="/x_icon.svg" alt="Twitter" className={styles.footerLogo} />
         </Link>
       </footer>
     </div>

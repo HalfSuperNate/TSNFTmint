@@ -6,6 +6,7 @@ import { _abi, _abiAddress, _listWallets, GetContractAddy } from './abiGet';
 import { MerkleTree } from 'merkletreejs';
 import { keccak256 } from 'ethers';
 import styles from '../styles/Home.module.css';
+import Image from 'next/image';
 
 function GetProof(_address) {
     if(!_address || !isValidEthereumAddress(_address)) return [];
@@ -116,7 +117,7 @@ function MintComponent() {
         <div className={styles.mintContainer}>
             <div className={styles.quantityControl}>
                 {mounted ? _mintPhase != 0 && 
-                    <img
+                    <Image
                         src="/left_arrow.png"
                         alt="Decrease Quantity"
                         onClick={handleDecreaseQuantity}
@@ -125,13 +126,13 @@ function MintComponent() {
                     /> : null
                 }
                 
-                <img
+                <Image
                     src={`/${quantity}.png`}
                     alt={`Quantity: ${quantity}`}
                     className={styles.quantityImage}
                 />
                 {mounted ? _mintPhase != 0 && 
-                    <img
+                    <Image
                         src="/right_arrow.png"
                         alt="Increase Quantity"
                         onClick={handleIncreaseQuantity}
@@ -158,7 +159,7 @@ function MintComponent() {
                 {mounted ? _supply >= 0 && <p>Supply: {parseInt(_supply) - 1} / 5555</p> : null}
             </div>
             <div className={styles.mintButton}>
-                <img
+                <Image
                     src="/mint.png"
                     alt="Mint Button"
                     onClick={handleMintClick}
