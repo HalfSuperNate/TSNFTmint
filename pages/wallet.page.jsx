@@ -3,6 +3,7 @@ import { useAccount } from 'wagmi';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import MintComponent from './mintCtrl.page';
 import styles from '../styles/Home.module.css';
+import Image from 'next/image';
   
 function Wallet() {
   const { address } = useAccount();
@@ -16,7 +17,7 @@ function Wallet() {
   return (
     <div className={styles.web3Container}>
       <div className={styles.topLogoContainer}>
-        <img src="/topLogo.png" alt="Logo" className={styles.topLogo} />
+        <Image src="/topLogo.png" alt="Logo" className={styles.topLogo} />
       </div>
 
       <div
