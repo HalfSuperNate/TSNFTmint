@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAccount, useContractWrite } from 'wagmi';
 import { useIsMounted } from './useIsMounted';
-import { GetPaused, GetPausedBatch, GetSupply, GetCost } from './readContract';
+import { GetPaused, GetPausedBatch, GetSupply, GetCost, AdminCheck } from './readContract';
 import { _abi, _abiAddress, _listWallets, GetContractAddy } from './abiGet';
 import { MerkleTree } from 'merkletreejs';
 import { keccak256 } from 'ethers';
@@ -47,6 +47,9 @@ function MintComponent() {
     var proof = GetProof(address);
     const isOnList = proof.length > 0;
     var _cost = GetCost(0,isOnList,2);
+    if (AdminCheck(address)) {
+        _cost = 0;
+    }
     const _supply = GetSupply(0);
     //const _mintPhase = GetMintPhase();
     const _mintPhase = 2;
