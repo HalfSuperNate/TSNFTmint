@@ -29,17 +29,17 @@ const Home: NextPage = () => {
         
       </main>
 
-      <Image src="/bottomImg.png" alt="Logo" className={styles.bottomImg} />
+      <Image width={500} height={500} src="/bottomImg.png" alt="Logo" className={styles.bottomImg} />
 
       <footer className={styles.footer}>
         <Link href="https://opensea.io/assets/ethereum/0x715af60ec1c3c65e294c7d8ef340f14e754c66bb" rel="noopener noreferrer" target="_blank">
-          <Image src="/opensea_icon.svg" alt="OpenSea" className={styles.footerLogo} />
+          <Image width={50} height={50} src="/opensea_icon.svg" alt="OpenSea" className={styles.footerLogo} />
         </Link>
         <Link href="https://etherscan.io/address/0x715af60ec1c3c65e294c7d8ef340f14e754c66bb" rel="noopener noreferrer" target="_blank">
-          <Image src="/eth_icon.svg" alt="Etherscan" className={styles.footerLogo} />
+          <Image width={50} height={50} src="/eth_icon.svg" alt="Etherscan" className={styles.footerLogo} />
         </Link>
         <Link href="https://twitter.com/DogSanctuaryNFT" rel="noopener noreferrer" target="_blank">
-          <Image src="/x_icon.svg" alt="Twitter" className={styles.footerLogo} />
+          <Image width={50} height={50} src="/x_icon.svg" alt="Twitter" className={styles.footerLogo} />
         </Link>
       </footer>
     </div>

@@ -85,8 +85,8 @@ function MintComponent() {
 
     const handleWalletChange = (event) => {
         setWalletAddress(event.target.value);
-        proof = GetProof(event.target.value);
-        _cost = GetCost(0,isOnList,2);
+        //proof = GetProof(address);
+        //_cost = GetCost(0,isOnList,2);
     };
 
     const handleMintClick = () => {
@@ -99,7 +99,7 @@ function MintComponent() {
             alert(`Error: Paused`);
             return;
         }
-        if (walletAddress.length !== 42) {
+        if (!isValidEthereumAddress(walletAddress)) {
             alert(`Confirm your send to ${address} then press Mint to complete transaction.`);
             setWalletAddress(address);
         } else {
@@ -118,6 +118,7 @@ function MintComponent() {
             <div className={styles.quantityControl}>
                 {mounted ? _mintPhase != 0 && 
                     <Image
+                        width={500} height={500}
                         src="/left_arrow.png"
                         alt="Decrease Quantity"
                         onClick={handleDecreaseQuantity}
@@ -127,12 +128,14 @@ function MintComponent() {
                 }
                 
                 <Image
+                    width={500} height={500}
                     src={`/${quantity}.png`}
                     alt={`Quantity: ${quantity}`}
                     className={styles.quantityImage}
                 />
                 {mounted ? _mintPhase != 0 && 
                     <Image
+                        width={500} height={500}
                         src="/right_arrow.png"
                         alt="Increase Quantity"
                         onClick={handleIncreaseQuantity}
@@ -160,6 +163,7 @@ function MintComponent() {
             </div>
             <div className={styles.mintButton}>
                 <Image
+                    width={500} height={500}
                     src="/mint.png"
                     alt="Mint Button"
                     onClick={handleMintClick}

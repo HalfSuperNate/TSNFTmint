@@ -61,6 +61,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto;
   background-color: transparent;
   position: relative;
   top: 0;
@@ -69,7 +70,9 @@
 
 .topLogo {
   width: 100%;
-  max-width: 500px;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 .bottomImg {
@@ -153,12 +156,13 @@
 
 .mintButton {
   margin: 5px;
+  width: auto;
   height: 50%;
   cursor: pointer;
 }
 
 .mintToControl {
-  display: none;
+  display: block;
   width: 50vw;
 }
 
