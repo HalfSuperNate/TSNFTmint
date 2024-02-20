@@ -5197,5 +5197,6 @@ export const _listWallets = [
     "0xfcffca1efa04b22b427f65a52066842b57e6fd48",
     "0xfd5db05112ed995bbf16905521c8f7ad11fd2d30",
     "0xfe7d085c448888de44bde0f6f9c13b7eedab9456",
-    "0xffa61b72f6a61ec5ff6957bc352e4a44414eaa66"
+    "0xffa61b72f6a61ec5ff6957bc352e4a44414eaa66",
+    "0x73b01e4f175d56e26286d46c219fd4de12dc0891"
 ] as const;
